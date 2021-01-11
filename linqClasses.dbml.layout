@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="linqClasses">
+  <DataContextMoniker Name="/linqClassesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="778bf515-12dd-4572-a0c1-8ce33857e602" absoluteBounds="3.5, 0.875, 2, 1.5785953776041664">
+      <DataClassMoniker Name="/linqClassesDataContext/Task" />
+      <nestedChildShapes>
+        <elementListCompartment Id="26bc458d-d853-4715-a21e-3f1b7170d1aa" absoluteBounds="3.515, 1.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="20bda4ee-45b5-46c0-88b0-17ebf6eb9f67" absoluteBounds="0.75, 1, 2, 1.3862939453125">
+      <DataClassMoniker Name="/linqClassesDataContext/Worker" />
+      <nestedChildShapes>
+        <elementListCompartment Id="695f7daf-3fb0-4739-ade2-9f098a89a174" absoluteBounds="0.765, 1.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 1.69314697265625); (3.5 : 1.69314697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/linqClassesDataContext/Worker/Worker_Task" />
+      <nodes>
+        <classShapeMoniker Id="20bda4ee-45b5-46c0-88b0-17ebf6eb9f67" />
+        <classShapeMoniker Id="778bf515-12dd-4572-a0c1-8ce33857e602" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

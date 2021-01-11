@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="localDatabase" Class="linqClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\localDatabase.mdf;Integrated Security=True;Connect Timeout=30" SettingsObjectName="Employee.Properties.Settings" SettingsPropertyName="localDatabase" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Task" Member="Tasks">
+    <Type Name="Task">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="WorkId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="category" Member="Category" Storage="_category" Type="System.String" DbType="NChar(40)" CanBeNull="true" />
+      <Column Name="description" Member="Description" Storage="_description" Type="System.String" DbType="NChar(40)" CanBeNull="true" />
+      <Association Name="Worker_Task" Member="Worker" ThisKey="WorkId" OtherKey="Id" Type="Worker" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Workers" Member="Workers">
+    <Type Name="Worker">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Surname" Type="System.String" DbType="NChar(30) NOT NULL" CanBeNull="false" />
+      <Association Name="Worker_Task" Member="Tasks" ThisKey="Id" OtherKey="WorkId" Type="Task" />
+    </Type>
+  </Table>
+</Database>
